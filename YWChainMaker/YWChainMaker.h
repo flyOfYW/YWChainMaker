@@ -103,7 +103,7 @@
 
 - (YWChainMaker *(^)(UIImage                  *)) imhighlightedImageg;   // default is nil
 
-- (YWChainMaker *(^)(UIImage                  *)) highlighted NS_AVAILABLE_IOS(3_0);   // default is NO
+- (YWChainMaker *(^)(BOOL                       )) highlighted;   // default is NO
 
 - (YWChainMaker *(^)(NSArray<UIImage *>        *)) animationImages;  // The array must contain UIImages. Setting hides the single image. default is nil
 

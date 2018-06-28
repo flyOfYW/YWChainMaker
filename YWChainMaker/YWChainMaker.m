@@ -254,20 +254,20 @@
     };
 }
 - (YWChainMaker *(^)(UIImage *))img{
-    return ^(UIImage *image){
-        self.imageView.image = image;
+    return ^(UIImage *img){
+        self.imageView.image = img;
         return self;
     };
 }
 - (YWChainMaker *(^)(UIImage *))imhighlightedImageg{
-    return ^(UIImage *image){
-        self.imageView.highlightedImage = image;
+    return ^(UIImage *imhighlightedImageg){
+        self.imageView.highlightedImage = imhighlightedImageg;
         return self;
     };
 }
-- (YWChainMaker *(^)(UIImage *))highlighted{
-    return ^(UIImage *image){
-        self.imageView.highlighted = image;
+- (YWChainMaker *(^)(BOOL ))highlighted{
+    return ^(BOOL highlighted){
+        self.imageView.highlighted = highlighted;
         return self;
     };
 }
