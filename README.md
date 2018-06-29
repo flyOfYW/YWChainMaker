@@ -1,6 +1,9 @@
 # YWChainMaker
 UIKit控件的链式编程
 
+## 目前支持的控件
+UILabel/UIButton/UITextField/UITextView/UIImageView的链式编程
+
 ## 环境要求
 
 该库需运行在 iOS 8.0 和 Xcode 7.0以上环境.
