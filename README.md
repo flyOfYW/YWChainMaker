@@ -12,3 +12,28 @@ YWChainMaker 可以在[CocoaPods](http://cocoapods.org)中获取，将以下内�
 ```ruby
 pod 'YWChainMaker'
 ```
+
+## 使用
+一般我们创建的代码的方式
+```
+    UILabel *la1 = [[UILabel alloc] init];
+    la1.frame = CGRectMake(70, 100, 300, 20);
+    la1.font = [UIFont systemFontOfSize:17];
+    la1.text = @"cfhjknlladslfdnsbsjnmfdsnmfnbnmn";
+    la1.textColor = [UIColor whiteColor];
+    la1.backgroundColor = [UIColor lightGrayColor];
+    la1.textAlignment = NSTextAlignmentCenter;
+    [self.view addSubview:la1];
+```
+现在可以像Masonry那样使用，让代码更加简洁，同时颜色支持16进制
+```
+   UILabel *la1 = [UILabel new];
+    [la1 yw_makeChains:^(YWChainMaker *make) {
+        make.frame(CGRectMake(70, 100, 300, 20))
+        .font(17)
+        .textColorColorWithRgbValue(0x777777)
+        .text(@"cfhjknlladslfdnsbsjnmfdsnmfnbnmn")
+        .addToSuperView(self.view);
+    }];
+    
+```
