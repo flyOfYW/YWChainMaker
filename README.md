@@ -26,6 +26,7 @@ pod 'YWChainMaker'
     [self.view addSubview:la1];
 ```
 现在可以像Masonry那样使用，让代码更加简洁，同时颜色支持16进制
+
 ```
    UILabel *la1 = [UILabel new];
     [la1 yw_makeChains:^(YWChainMaker *make) {
