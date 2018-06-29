@@ -12,6 +12,11 @@ YWChainMaker 可以在[CocoaPods](http://cocoapods.org)中获取，将以下内�
 ```ruby
 pod 'YWChainMaker'
 ```
+然后在需要使用的地方引入
+
+```
+#import "UIView+YWAddInit.h"
+```
 
 ## 使用
 一般我们创建的代码的方式
