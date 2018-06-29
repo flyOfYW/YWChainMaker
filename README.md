@@ -15,7 +15,7 @@ pod 'YWChainMaker'
 然后在需要使用的地方引入
 
 ```
-#import "UIView+YWAddInit.h"
+#import <YWChainMaker/UIView+YWAddInit.h>
 ```
 
 ## 使用
