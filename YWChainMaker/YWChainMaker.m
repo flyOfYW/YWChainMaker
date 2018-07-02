@@ -15,6 +15,8 @@
 @property (nonatomic,   weak) UITextView *textView;
 @property (nonatomic,   weak) UIImageView *imageView;
 
+@property (nonatomic,   weak) UITableView *tableView;
+
 
 @end
 
@@ -296,6 +298,74 @@
     };
 }
 
+- (YWChainMaker *(^)(id<UITableViewDataSource>))tableViewDataSource{
+    return ^(id<UITableViewDataSource> dataSource){
+        self.tableView.dataSource = dataSource;
+        return self;
+    };
+}
+- (YWChainMaker *(^)(id<UITableViewDelegate>))tableViewDelegate{
+    return ^(id<UITableViewDelegate> delegate){
+        self.tableView.delegate = delegate;
+        return self;
+    };
+}
+- (YWChainMaker *(^)(CGFloat))rowHeight{
+    return ^(CGFloat rowHeight){
+        self.tableView.rowHeight = rowHeight;
+        return self;
+    };
+}
+- (YWChainMaker *(^)(CGFloat))sectionHeaderHeight{
+    return ^(CGFloat sectionHeaderHeight){
+        self.tableView.sectionHeaderHeight = sectionHeaderHeight;
+        return self;
+    };
+}
+- (YWChainMaker *(^)(CGFloat))sectionFooterHeight{
+    return ^(CGFloat sectionFooterHeight){
+        self.tableView.sectionFooterHeight = sectionFooterHeight;
+        return self;
+    };
+}
+- (YWChainMaker *(^)(CGFloat))estimatedRowHeight{
+    return ^(CGFloat estimatedRowHeight){
+        self.tableView.estimatedRowHeight = estimatedRowHeight;
+        return self;
+    };
+}
+-(YWChainMaker *(^)(CGFloat))estimatedSectionHeaderHeight{
+    return ^(CGFloat estimatedSectionHeaderHeight){
+        self.tableView.estimatedSectionHeaderHeight = estimatedSectionHeaderHeight;
+        return self;
+    };
+}
+-(YWChainMaker *(^)(CGFloat))estimatedSectionFooterHeight{
+    return ^(CGFloat estimatedSectionFooterHeight){
+        self.tableView.estimatedSectionFooterHeight = estimatedSectionFooterHeight;
+        return self;
+    };
+}
+- (YWChainMaker *(^)(UIEdgeInsets))separatorInset{
+    return ^(UIEdgeInsets separatorInset){
+        self.tableView.separatorInset = separatorInset;
+        return self;
+    };
+}
+- (YWChainMaker *(^)(UIView *))tableHeaderView{
+    return ^(UIView *tableHeaderView){
+        self.tableView.tableHeaderView = tableHeaderView;
+        return self;
+    };
+}
+- (YWChainMaker *(^)(UIView *))tableFooterView{
+    return ^(UIView *tableFooterView){
+        self.tableView.tableFooterView = tableFooterView;
+        return self;
+    };
+}
+
+
 
 //MARK: -- Private method
 - (void)setText:(NSString * )text{
@@ -383,6 +453,8 @@
         _textField = (UITextField *)_originalView;
     }else if ([_originalView isKindOfClass:UITextView.class]){
         _textView = (UITextView *)_originalView;
+    }else if ([_originalView isKindOfClass:[UITableView class]]){
+        _tableView = (UITableView *)_originalView;
     }
     
 }

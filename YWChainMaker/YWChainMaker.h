@@ -21,7 +21,6 @@
 
 - (YWChainMaker *(^)(uint32_t        )) textColorColorWithRgbValue;   // default is nil (text draws black)
 
-
 - (YWChainMaker *(^)(NSTextAlignment )) textAlignment;   // default is NSTextAlignmentNatural (before iOS 9, the default was NSTextAlignmentLeft)
 
 - (YWChainMaker *(^)(NSLineBreakMode )) lineBreakMode;  // default is NSLineBreakByTruncatingTail. used for single and multiple lines of text
@@ -45,6 +44,7 @@
 
 - (YWChainMaker *(^)(UIBaselineAdjustment   )) baselineAdjustment;         // default is UIBaselineAdjustmentAlignBaselines
 
+//MARK: --- UIButtion
 
 - (YWChainMaker *(^)(NSString *,UIControlState)) title;  // default is nil. title is assumed to be single line
 
@@ -64,6 +64,7 @@
 
 - (YWChainMaker *(^)(UIEdgeInsets             )) imageEdgeInsets;     // default is UIEdgeInsetsZero
 
+//MARK: --- UITextField
 
 - (YWChainMaker *(^)(UITextBorderStyle         )) borderStyle;  // default is UITextBorderStyleNone. If set to UITextBorderStyleRoundedRect, custom background images are ignored.
 
@@ -89,6 +90,7 @@
 
 - (YWChainMaker *(^)(UITextFieldViewMode       )) rightViewMode;   // sets when the right view shows up. default is UITextFieldViewModeNever
 
+//MARK: --- UITextView
 - (YWChainMaker *(^)(id<UITextViewDelegate>   )) textViewdDelegate;   // default is nil. weak reference
 
 - (YWChainMaker *(^)(NSRange                  )) selectedRange;
@@ -113,6 +115,30 @@
 
 - (YWChainMaker *(^)(NSInteger                  )) animationRepeatCount;    // 0 means infinite (default is 0)
 
+//MARK: -- UITableView
+
+- (YWChainMaker *(^)(id <UITableViewDataSource> )) tableViewDataSource;
+
+- (YWChainMaker *(^)(id <UITableViewDelegate>   )) tableViewDelegate;
+
+- (YWChainMaker *(^)(CGFloat                    )) rowHeight;   // default is UITableViewAutomaticDimension
+
+- (YWChainMaker *(^)(CGFloat                    )) sectionHeaderHeight;  // default is UITableViewAutomaticDimension
+
+- (YWChainMaker *(^)(CGFloat                    )) sectionFooterHeight;  // default is UITableViewAutomaticDimension
+
+- (YWChainMaker *(^)(CGFloat                    )) estimatedRowHeight NS_AVAILABLE_IOS(7_0);    // default is UITableViewAutomaticDimension, set to 0 to disable
+
+- (YWChainMaker *(^)(CGFloat                    )) estimatedSectionHeaderHeight NS_AVAILABLE_IOS(7_0);  // default is UITableViewAutomaticDimension, set to 0 to disable
+
+- (YWChainMaker *(^)(CGFloat                    )) estimatedSectionFooterHeight NS_AVAILABLE_IOS(7_0);  // default is UITableViewAutomaticDimension, set to 0 to disable
+
+- (YWChainMaker *(^)(UIEdgeInsets               )) separatorInset NS_AVAILABLE_IOS(7_0) UI_APPEARANCE_SELECTOR; // allows customization of the frame of cell separators; see also the separatorInsetReference property. Use UITableViewAutomaticDimension for the automatic inset for that edge.
+
+- (YWChainMaker *(^)(UIView                     *)) tableHeaderView;    // accessory view for above row content. default is nil. not to be confused with section header
+
+- (YWChainMaker *(^)(UIView                     *)) tableFooterView;    // accessory view below content. default is nil. not to be confused with section footer
+
 
 @end
 
@@ -132,8 +158,6 @@
 - (YWChainMaker *(^)(CGFloat                 )) contentScaleFactor NS_AVAILABLE_IOS(4_0);
 
 - (YWChainMaker *(^)(BOOL                    )) multipleTouchEnabled __TVOS_PROHIBITED;   // default is NO
-
-
 
 - (YWChainMaker *(^)(UIColor                 *)) tintColor NS_AVAILABLE_IOS(5_0);  // The tintColor is inherited through the superview hierarchy. See UIView for more information.
 

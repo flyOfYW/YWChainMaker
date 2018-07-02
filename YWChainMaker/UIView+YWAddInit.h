@@ -9,5 +9,11 @@
 #import "YWChainMaker.h"
 
 @interface UIView (YWAddInit)
+
+//这个类似SDAutoLayout的用法
+- (YWChainMaker *)yw_make;
+@property (nonatomic) YWChainMaker *ownMake;
+
+//这个用法类似Masonry
 - (void)yw_makeChains:(void(^)(YWChainMaker * make))block;
 @end

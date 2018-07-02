@@ -17,6 +17,7 @@
 		DA1A2C5B20E4DBDD00367F9B /* YWChainMakerDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1A2C5A20E4DBDD00367F9B /* YWChainMakerDemoUITests.m */; };
 		DA1A2C6D20E4DC5E00367F9B /* UIView+YWAddInit.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1A2C6A20E4DC5D00367F9B /* UIView+YWAddInit.m */; };
 		DA1A2C6E20E4DC5E00367F9B /* YWChainMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1A2C6C20E4DC5D00367F9B /* YWChainMaker.m */; };
+		DAA104A520E606E1000E6B91 /* YWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA104A420E606E1000E6B91 /* YWViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,8 @@
 		DA1A2C6A20E4DC5D00367F9B /* UIView+YWAddInit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YWAddInit.m"; sourceTree = "<group>"; };
 		DA1A2C6B20E4DC5D00367F9B /* YWChainMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YWChainMaker.h; sourceTree = "<group>"; };
 		DA1A2C6C20E4DC5D00367F9B /* YWChainMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YWChainMaker.m; sourceTree = "<group>"; };
+		DAA104A320E606E1000E6B91 /* YWViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YWViewController.h; sourceTree = "<group>"; };
+		DAA104A420E606E1000E6B91 /* YWViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YWViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +115,8 @@
 				DA1A2C3720E4DBDD00367F9B /* AppDelegate.m */,
 				DA1A2C3920E4DBDD00367F9B /* ViewController.h */,
 				DA1A2C3A20E4DBDD00367F9B /* ViewController.m */,
+				DAA104A320E606E1000E6B91 /* YWViewController.h */,
+				DAA104A420E606E1000E6B91 /* YWViewController.m */,
 				DA1A2C3C20E4DBDD00367F9B /* Main.storyboard */,
 				DA1A2C3F20E4DBDD00367F9B /* Assets.xcassets */,
 				DA1A2C4120E4DBDD00367F9B /* LaunchScreen.storyboard */,
@@ -284,6 +289,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAA104A520E606E1000E6B91 /* YWViewController.m in Sources */,
 				DA1A2C3B20E4DBDD00367F9B /* ViewController.m in Sources */,
 				DA1A2C4620E4DBDD00367F9B /* main.m in Sources */,
 				DA1A2C6D20E4DC5E00367F9B /* UIView+YWAddInit.m in Sources */,

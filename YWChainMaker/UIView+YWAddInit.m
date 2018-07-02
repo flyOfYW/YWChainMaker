@@ -7,6 +7,7 @@
 //
 
 #import "UIView+YWAddInit.h"
+#import <objc/runtime.h>
 
 @implementation UIView (YWAddInit)
 
@@ -16,5 +17,19 @@
     chainMaker.originalView = self;
     block(chainMaker);
 }
+- (YWChainMaker *)ownMake{
+    return objc_getAssociatedObject(self, _cmd);
+}
+- (void)setOwnMake:(YWChainMaker *)ownMake{
+    objc_setAssociatedObject(self, @selector(ownMake), ownMake, OBJC_ASSOCIATION_RETAIN);
+}
 
+- (YWChainMaker *)yw_make{
+    YWChainMaker *chainMaker = [self ownMake];
+    if (!chainMaker) {
+        chainMaker =  [[YWChainMaker alloc] init];
+        chainMaker.originalView = self;
+    }
+    return chainMaker;
+}
 @end
