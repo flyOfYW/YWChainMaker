@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "YWChainMaker"
-  s.version      = "0.0.4"
+  s.version      = "0.0.5"
   s.summary      = "UIKit部分控件的链式编程"
 
   # This description is used to generate tags and improve search results.

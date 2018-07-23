@@ -532,9 +532,37 @@
         return self;
     };
 }
+- (YWChainMaker *(^)(BOOL))clipsToBounds{
+    return ^(BOOL clipsToBounds){
+        self.originalView.clipsToBounds = clipsToBounds;
+        return self;
+    };
+}
 - (YWChainMaker *(^)(UIView *))addToSuperView{
     return ^(UIView *superView){
         [superView addSubview:self.originalView];
+        return self;
+    };
+}
+@end
+
+
+@implementation YWChainMaker (YWCALayer)
+- (YWChainMaker *(^)(CGFloat))cornerRadius{
+    return ^(CGFloat cornerRadius){
+        self.originalView.layer.cornerRadius = cornerRadius;
+        return self;
+    };
+}
+- (YWChainMaker *(^)(CGFloat))borderWidth{
+    return ^(CGFloat borderWidth){
+        self.originalView.layer.borderWidth = borderWidth;
+        return self;
+    };
+}
+- (YWChainMaker *(^)(CGColorRef))borderColor{
+    return ^(CGColorRef borderColor){
+        self.originalView.layer.borderColor = borderColor;
         return self;
     };
 }

@@ -101,6 +101,7 @@
 
 - (YWChainMaker *(^)(UIDataDetectorTypes      )) dataDetectorTypes NS_AVAILABLE_IOS(3_0) __TVOS_PROHIBITED;
 
+//已废弃
 - (YWChainMaker *(^)(UIImage                  *)) img;   // default is nil
 
 - (YWChainMaker *(^)(UIImage                  *)) imhighlightedImageg;   // default is nil
@@ -169,11 +170,32 @@
 
 - (YWChainMaker *(^)(uint32_t,         CGFloat)) backgroundColorWithRgbaValue UI_APPEARANCE_SELECTOR;    // default is nil. Can be useful with the appearance proxy on custom UIView subclasses.
 
+- (YWChainMaker *(^)(BOOL                      )) clipsToBounds; // When YES, content and subviews are clipped to the bounds of the view. Default is NO.
+
+
 - (YWChainMaker *(^)(UIView                  *)) addToSuperView;
 
 
 @end
 
+
+@interface YWChainMaker (YWCALayer)
+
+/* Defines which of the four corners receives the masking when using
+ * `cornerRadius' property. Defaults to all four corners. */
+- (YWChainMaker *(^)(                   CGFloat)) cornerRadius;
+
+/* The width of the layer's border, inset from the layer bounds. The
+ * border is composited above the layer's content and sublayers and
+ * includes the effects of the `cornerRadius' property. Defaults to
+ * zero. Animatable. */
+- (YWChainMaker *(^)(                   CGFloat)) borderWidth;
+
+/* The color of the layer's border. Defaults to opaque black. Colors
+ * created from tiled patterns are supported. Animatable. */
+- (YWChainMaker *(^)(                CGColorRef)) borderColor;
+
+@end
 
 
 @interface UIColor (RGBValue)

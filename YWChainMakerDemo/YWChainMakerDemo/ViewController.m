@@ -32,11 +32,19 @@
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(preAction)];
     [la addGestureRecognizer:tap];
     
+    UILabel *l1 = [[UILabel alloc] initWithFrame:CGRectMake(70, 100, 300, 20)];
+    l1.font = [UIFont systemFontOfSize:17];
+    l1.textColor = [UIColor redColor];
+    l1.text = @"cfhjknlladslfdnsbsjnmfdsnmfnbnmn";
+    [self.view addSubview:l1];
+    
+    
     UILabel *la1 = [UILabel new];
     [la1 yw_makeChains:^(YWChainMaker *make) {
         make.frame(CGRectMake(70, 100, 300, 20))
         .font(17)
-        .textColorColorWithRgbValue(0x777777)
+        .textColor(UIColor.redColor)
+//        .textColorColorWithRgbValue(0x777777) //或者直接使用16进制
         .text(@"cfhjknlladslfdnsbsjnmfdsnmfnbnmn")
         .addToSuperView(self.view);
     }];
@@ -50,8 +58,26 @@
     .text(@"去除block的写法");
     
     
+    UIImageView *ivon = [UIImageView new];
+    
+    ivon.yw_make
+    .frame(CGRectMake(70, 150, 40, 40))
+    .backgroundColor(UIColor.whiteColor)
+    .imhighlightedImageg([UIImage imageNamed:@"con"])
+    .addToSuperView(self.view);
+    
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn.yw_make
+    .frame(CGRectMake(70, 200, 60, 40))
+    .backgroundColor(UIColor.redColor)
+    .addToSuperView(self.view)
+    .clipsToBounds(YES)
+    .cornerRadius(9)
+    .borderWidth(2)
+    .borderColor([UIColor greenColor].CGColor);
     
     
+    [btn addTarget:self action:@selector(preAction) forControlEvents:UIControlEventTouchUpInside];
     
 }
 
