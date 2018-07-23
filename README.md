@@ -2,7 +2,7 @@
 UIKit控件的链式编程
 
 ## 目前支持的控件
-UILabel/UIButton/UITextField/UITextView/UIImageView的链式编程
+UILabel/UIButton/UITextField/UITextView/UIImageView/UITableView的链式编程
 
 ## 环境要求
 
